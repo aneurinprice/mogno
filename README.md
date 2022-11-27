@@ -20,7 +20,7 @@ This script is designed to add bluray, 4k and 4k hdr banners onto movie posters 
 ![Before](assets/before.jpg?raw=true "Before")
 
 ## After
-![After](assets/after.jpg.jpg?raw=true "After")
+![After](assets/after.jpg?raw=true "After")
 
 
 # Configuration
