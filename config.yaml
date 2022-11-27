@@ -1,2 +1,11 @@
-PlexHost: "https://plex.nyeprice.space"
-PlexToken: "cXMJRKzqkymbsWZwbaog"
+#PlexHost: "http://192.168.1.1:32400"
+
+#PlexToken: "YourPlexTokenHere"
+
+#PlexMoviesLibrary: "Movies"
+
+#HandleHDR: True
+
+#UploadPoster: False
+
+#KeepPoster: True
