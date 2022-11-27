@@ -5,6 +5,8 @@ Requires:
   - plexapi (Python module)
 
 
+# How to run
+  `python3 main.py`
 # Function
 
 This script is designed to add bluray, 4k and 4k hdr banners onto movie posters in plex. I doubt many people will want this, but it's of mild interest ot me.
