@@ -4,8 +4,8 @@
 
 #PlexMoviesLibrary: "Movies"
 
-#HandleHDR: True
-
 #UploadPoster: False
 
 #KeepPoster: True
+
+#BlurayCollection: "Blurays"

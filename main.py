@@ -1,4 +1,5 @@
 from plexapi.server import PlexServer
+import plexapi
 import os
 import requests
 import shutil
@@ -26,8 +27,8 @@ def AddBanner (movie, category, Poster):
 	
 
 def UploadPoster (movie, Poster):
-	movie.uploadPoster(filepath='./output/' + Poster)	
-		
+	movie.uploadPoster(filepath='./output/' + Poster)
+	print(Poster + " Uploaded")	
 def TidyUp (movie, Poster):
 	if not (config['KeepPoster']):
 		os.remove('output/' + Poster) 
@@ -42,23 +43,12 @@ def RunMain (movie, category):
 	print("Completed " + movie.title)
 
 
-
-
-
-	
 config, plex = LoadConfig()
 movies = plex.library.section(config['PlexMoviesLibrary'])
 
 
-if config['HandleHDR']:
-	for movie in movies.search(resolution="4k", hdr=False):
-		RunMain(movie, "UHD")
-	for movie in movies.search(resolution="4k", hdr=True):
-		RunMain(movie, "HDR")
+for movie in movies.search(collection=config['BlurayCollection'], resolution="4k"):
+	RunMain(movie, "UHD")
 
-if not config['HandleHDR']:
-	for movie in movies.search(resolution="4k"):
-		RunMain(movie, "UHD")
-
-for movie in movies.search(resolution="1080p"):
+for movie in movies.search(collection=config['BlurayCollection'], resolution="1080p"):
 	RunMain(movie, "Bluray")
