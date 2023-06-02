@@ -8,6 +8,7 @@ python-lint:
     name: "cytopia/pylint:latest"
     entrypoint: [""]
   script:
+    - pip install -r requirements.txt 
     - pylint main.py
 
 test:
