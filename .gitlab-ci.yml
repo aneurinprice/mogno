@@ -1,0 +1,9 @@
+stages:
+  - lint
+
+test:
+  stage: lint
+  image: "cytopia/pylint:latest"
+  entrypoint: [""]
+  script:
+    - pylint .
