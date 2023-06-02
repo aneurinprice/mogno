@@ -3,7 +3,8 @@ stages:
 
 test:
   stage: lint
-  image: "cytopia/pylint:latest"
-  entrypoint: [""]
+  image:
+    name: "cytopia/pylint:latest"
+    entrypoint: [""]
   script:
     - pylint .
